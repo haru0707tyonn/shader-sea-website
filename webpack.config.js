@@ -1,12 +1,12 @@
 module.exports = {
-  mode: "development",
+  mode: "production", // デプロイするためにdevelopmentからproductionに変更
   entry: "./src/index.js",
   output: {
-    path: `${__dirname}/dist`,
+    path: `${__dirname}/public`, // デプロイするためにdistからpublicに変更
     filename: "bundle.js",
   },
   devServer: {
-    static: "./dist",
+    static: "./public", // デプロイするためにdistからpublicに変更
   },
   resolve: {
     extensions: [".js", ".glsl", "vs", "fs"],
